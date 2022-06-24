@@ -1,0 +1,11 @@
+1) SP500 price is missing for weekends. I suggest simply extrapolating end of week price to weekends to make it consistent with bitcoin
+2) I can't think of any particular algorithm to check whether sometimes days are missed in other data sources too, however one thing we could do is select a specific date as a start in all datasets, then look at the length of the dataset.
+3) The btc supply file literally only has the stock value. Calculate in other columns several alternative metrics for flow now. You will most likely experiment with several alternatives when training a model.
+4)...
+
+Next Steps:
+
+1. Download all Artem's metrics as well.
+2. Recalibrate all datasets - i.e. start and end with the same date
+3. Calculate z-scores of all metrics
+4. Write a function that automaticall recalibrate datasets based on input and returns z-score values all in one .csv file + the new start and end date
